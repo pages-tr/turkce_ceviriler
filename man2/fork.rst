@@ -58,7 +58,7 @@ Aşağıdaki hususlara dikkat edin:
 
 - Alt işlem, tek bir iş parçacığıyla oluşturulur; bu işlem **çatal**\ () olarak adlandırılır. Ebeveynin tüm sanal adres alanı, mutekslerin durumu, koşul değişkenleri ve diğer pthreads nesneleri dahil olmak üzere çocukta çoğaltılır; **pthread_atfork**\ (3) kullanımı, bunun neden olabileceği sorunların çözümünde yardımcı olabilir.
 
-- Çok iş parçacıklı bir programdaki ** çatal **\ () sonrasında çocuk, çağrılıncaya kadar yalnızca zaman uyumsuz sinyal güvenliği işlevlerini (bkz. **sinyal güvenliği**\ (7)) güvenle arayabilir **execve**\ (2) uygulayın.
+- Çok iş parçacıklı bir programdaki **fork**\() sonrasında çocuk, çağrılıncaya kadar yalnızca zaman uyumsuz sinyal güvenliği işlevlerini (bkz. **sinyal güvenliği**\ (7)) güvenle arayabilir **execve**\ (2) uygulayın.
 
 - Çocuk, üst öğenin açık dosya kümesinin kopyalarını devralır
    Tanımlayıcılar. Alt öğedeki her dosya tanımlayıcı, üst dosyadaki ilgili dosya tanımlayıcı ile aynı açık dosya tanımına (bkz. **açık**\ (2)) başvurur. Bu, iki dosya tanıtıcısının açık dosya durum bayraklarını, dosya ofsetini ve sinyale dayalı G / Ç özniteliklerini paylaştığı anlamına gelir (**fcntl**\ (2) içindeki **F_SETOWN** ve **F_SETSIG** açıklamasına bakın) ).
