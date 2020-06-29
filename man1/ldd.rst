@@ -31,9 +31,9 @@ Normal durumda, **ldd**, **LD_TRACE_LOADED_OBJECTS** ortam değişkeni 1 olarak 
 Güvenlik
 --------
 
-Bazı durumlarda (örneğin, programın * ld-inux.so * dışında bir ELF yorumlayıcısı belirttiği durumlarda), ** ldd ** 'nin bazı sürümlerinin, programı doğrudan yürütmeye çalışarak bağımlılık bilgilerini almaya çalışabileceğini unutmayın. bu da programın ELF yorumlayıcısında tanımlanan kodların yürütülmesine ve belki de programın kendisinin yürütülmesine yol açabilir. (2.27'den önceki glibc sürümlerinde, yukarı dağıtım ** ldd ** uygulaması bunu yaptı, ancak çoğu dağıtımda değiştirilmemiş bir sürüm sağlandı.)
+Bazı durumlarda (örneğin, programın *ld-inux.so* dışında bir ELF yorumlayıcısı belirttiği durumlarda), **ldd** 'nin bazı sürümlerinin, programı doğrudan yürütmeye çalışarak bağımlılık bilgilerini almaya çalışabileceğini unutmayın. bu da programın ELF yorumlayıcısında tanımlanan kodların yürütülmesine ve belki de programın kendisinin yürütülmesine yol açabilir. (2.27'den önceki glibc sürümlerinde, yukarı dağıtım **ldd** uygulaması bunu yaptı, ancak çoğu dağıtımda değiştirilmemiş bir sürüm sağlandı.)
 
-Bu nedenle, rastgele kod çalıştırılmasına neden olabileceğinden, güvenilir olmayan bir yürütülebilir dosya üzerinde * hiçbir zaman * ldd ** kullanmamalısınız. Güvenilmeyen yürütülebilir dosyalar ile uğraşırken daha güvenli bir alternatif:
+Bu nedenle, rastgele kod çalıştırılmasına neden olabileceğinden, güvenilir olmayan bir yürütülebilir dosya üzerinde hiçbir zaman **ldd** kullanmamalısınız. Güvenilmeyen yürütülebilir dosyalar ile uğraşırken daha güvenli bir alternatif:
 
 ::
 
