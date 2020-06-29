@@ -11,7 +11,7 @@ ldd - paylaşılan nesne bağımlılıklarını yazdır
 AÇIKLAMA
 ===========
 
-** ldd **, her program için gereken paylaşılan nesneleri (paylaşılan kütüphaneler) veya komut satırında belirtilen paylaşılan nesneyi yazdırır. Kullanımı ve çıktısının bir örneği aşağıdadır:
+**ldd**, her program için gereken paylaşılan nesneleri (paylaşılan kütüphaneler) veya komut satırında belirtilen paylaşılan nesneyi yazdırır. Kullanımı ve çıktısının bir örneği aşağıdadır:
 
 ::
 
