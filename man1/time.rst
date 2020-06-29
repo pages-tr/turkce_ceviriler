@@ -139,7 +139,7 @@ Biçim normal printf benzeri şekilde yorumlanır. Sıradan karakterler doğruda
 **%x**
      (**tcsh** \ (1) konumunda değildir.) Komutun durumundan çıkın.
      
-GNU options
+GNU seçenekleri
 -----------
 
 **-f**\ *format*\ **, --format=**\ *format*
@@ -160,7 +160,7 @@ GNU options
 **-q, --quiet**
     Anormal program sonlandırmasını (*komut* bir sinyalle sonlandırılır) veya sıfır olmayan çıkış durumunu bildirmeyin.
 
-GNU standard options
+GNU standart seçenekleri
 --------------------
 
 **--help**
@@ -172,7 +172,7 @@ GNU standard options
 **--**
    Seçenek listesini sonlandır.
    
-BÖCEK
+BÖCÜK
 ====
 
 Tüm kaynaklar UNIX'in tüm sürümleri tarafından ölçülmez, bu nedenle bazı değerleri sıfır olarak bildirilebilir. Mevcut seçim çoğunlukla 4.2 veya 4.3BSD tarafından sağlanan verilerden esinlenmiştir.
