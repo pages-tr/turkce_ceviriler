@@ -33,15 +33,15 @@ SEÇENEKLER
 Başarılı olduğunda, **pldd** 0 durumundan çıkar. Belirtilen işlem yoksa, kullanıcının dinamik paylaşılan nesne listesine erişme izni yoktur veya komut satırı bağımsız değişkeni sağlanmaz, **pldd** 1 durumu vardır. Geçersiz bir seçenek verilirse 64 durumundan çıkar.
 
 
-VERSIONS
+SÜRÜMLER
 ========
 
-** pldd **, glibc 2.15'ten beri kullanılabilir.
+**pldd**, glibc 2.15'ten beri kullanılabilir.
 
-UYGUN
+UYGUNLUK
 =============
 
-** pldd ** komutu POSIX.1 tarafından belirtilmemiştir. Diğer bazı sistemlerde de benzer bir komut vardır.
+**pldd** komutu POSIX.1 tarafından belirtilmemiştir. Diğer bazı sistemlerde de benzer bir komut vardır.
 
 NOTLAR
 =====
