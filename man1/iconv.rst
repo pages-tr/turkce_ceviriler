@@ -66,3 +66,42 @@ Dahili olarak, **iconv** programı, bir karakter kümesine ve karakter kümesind
 - **GCONV_PATH** ayarlanmamışsa, **iconv_open** \ (3) **iconvconfig** \ (8) tarafından oluşturulan sistem gconv modülü yapılandırma önbellek dosyasını yükler ve ardından yapılandırmaya bağlı olarak gconv'u yükler dönüşüm gerçekleştirmek için gerekli modüller. Sistem gconv modülü yapılandırma önbellek dosyası yoksa, sistem gconv modülü yapılandırma dosyası kullanılır.
 
 - **GCONV_PATH** tanımlanmışsa (iki nokta üst üste ayrılmış yol adı listesi olarak), sistem gconv modülü yapılandırma önbelleği kullanılmaz. Bunun yerine, **iconv_open** \ (3) önce **GCONV_PATH** dizinindeki dizinleri sırayla ve ardından sistem varsayılan gconv modülü yapılandırma dosyasını arayarak yapılandırma dosyalarını yüklemeye çalışır. Bir dizin bir gconv modülü yapılandırma dosyası içermiyorsa, içerebileceği gconv modülleri yok sayılır. Bir dizin bir gconv modülü yapılandırma dosyası içeriyorsa ve dizinde bu dönüşüm için gereken bir modülün bulunduğu belirlenirse, gerekli modül bu dizinden yüklenir; sıra, **GCONV_PATH** içinde bulunan ilk uygun modül olacak şekilde kullanıldı. Bu, kullanıcıların **GCONV_PATH** dizinlerinde bu modülleri sağlayarak özel modüller kullanmasına ve hatta sistem tarafından sağlanan modülleri değiştirmesine olanak tanır.
+
+DOSYALAR
+=====
+
+*/usr/lib/gconv*
+    Her zamanki varsayılan gconv modülü yolu.
+
+*/usr/lib/gconv/gconv-modules*
+    Normal sistem varsayılan gconv modülü yapılandırma dosyası.
+
+*/usr/lib/gconv/gconv-modules.cache*
+    Normal sistem gconv modülü yapılandırma önbelleği.
+
+UYUMLULUK
+=============
+
+POSIX.1-2001.
+
+ÖRNEKLER
+========
+
+ISO 8859-15 karakter kodlamasından UTF-8'e metin dönüştürün:
+
+::
+
+   $ iconv -f ISO-8859-15 -t UTF-8 < input.txt > output.txt
+
+Bir sonraki örnek UTF-8'den ASCII'ye dönüştürerek mümkün olduğunda harf çevirisi yapar:
+
+::
+
+   $ echo abc ß α € àḃç | iconv -f UTF-8 -t ASCII//TRANSLIT
+   abc ss ? EUR abc
+
+AYRICA BAKINIZ
+========
+
+**locale**\ (1), **uconv**\ (1), **iconv**\ (3), **nl_langinfo**\ (3),
+**charsets**\ (7), **iconvconfig**\ (8)
