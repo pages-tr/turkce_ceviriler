@@ -15,7 +15,7 @@ Bölüm 1 için çevirisi yapılan kılavuz dosyaları.
 - [ ] locale.1.rst
 - [ ] localedef.1.rst
 - [ ] memusage.1.rst
-- [ ] memusagestat.1.rst
+- [x] memusagestat.1.rst
 - [x] mtrace.1.rst
 - [x] pldd.1.rst
 - [ ] sprof.1.rst
