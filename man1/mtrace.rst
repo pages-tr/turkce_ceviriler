@@ -11,7 +11,7 @@ mtrace - malloc izleme günlüğünü yorumlar
 AÇIKLAMA
 ===========
 
-**mtrace**, içeriği **mtrace** \ (3) tarafından üretilen * mtracedata * dosyasında bulunan izleme günlüğünün okunabilir çıktılarını yorumlamak ve sağlamak için kullanılan bir Perl betiğidir. *İkili* sağlanırsa, **mtrace** çıktısı ayrıca sorunlu konumlar için satır numarası bilgileri içeren kaynak dosya adını da içerir (*ikilinin* hata ayıklama bilgileri ile derlendiği varsayılarak).
+**mtrace**, içeriği **mtrace** \ (3) tarafından üretilen *mtracedata* dosyasında bulunan izleme günlüğünün okunabilir çıktılarını yorumlamak ve sağlamak için kullanılan bir Perl betiğidir. *İkili* sağlanırsa, **mtrace** çıktısı ayrıca sorunlu konumlar için satır numarası bilgileri içeren kaynak dosya adını da içerir (*ikilinin* hata ayıklama bilgileri ile derlendiği varsayılarak).
 **mtrace** \ (3) işlevi ve **mtrace** komut dosyası kullanımı hakkında daha fazla bilgi için bkz. **mtrace** \ (3).
 
 OPTIONS
