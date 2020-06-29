@@ -57,3 +57,8 @@ SEÇENEKLER
 ===========
 
 Başarı sıfır, hatalar sıfır değil.
+
+ÇEVRE
+===========
+
+Dahili olarak, ** iconv ** programı, bir karakter kümesine ve karakter kümesinden dönüştürmek için * gconv * modüllerini (dinamik olarak yüklenmiş paylaşılan kütüphaneler) kullanan ** iconv ** \ (3) işlevini kullanır. ** iconv ** \ (3) öğesini çağırmadan önce, ** iconv ** programı önce ** iconv_open ** \ (3) kullanarak bir dönüşüm tanımlayıcısı ayırmalıdır. İkinci işlevin çalışması ** GCONV_PATH ** ortam değişkeninin ayarından etkilenir:
