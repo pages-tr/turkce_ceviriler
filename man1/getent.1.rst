@@ -4,12 +4,12 @@
 getent - İsim Hizmet Anahtarı (Name Service Switch) kitaplıklarından giriş alma
 
 ÖZET
-========
+====
 
 **getent [seçenek]... veritabanı anahtarı...**
 
 AÇIKLAMA
-===========
+========
 
 **getent** komutu, İsim Hizmeti Anahtarı kitaplıkları tarafından desteklenen ve */etc/nsswitch.conf*
 içinde yapılandırılan veritabanlarındaki girdileri görüntüler. Bir veya daha fazla *anahtar değişken*
@@ -19,19 +19,19 @@ sağlanırsa, yalnızca verilen tuşlarla eşleşen girişler görüntülenir.
 Desteklenen *veritabanları* aşağıda listelenmiştir:
 
    **ahosts**
-      Herhangi bir *anahtar* verilmediği takdirde, 
+      Herhangi bir *anahtar* verilmediği takdirde,
       sunucu veritabanlarını dökümlemek için **sethostent**\ (3),
       **gethostent**\ (3), ve **endhostent**\ (3)
       komutlarını kullanın.
-      
+
       Bu, **sunucular** için aynıdır. Bir veya daha fazla *anahtar* bağımsız değişkeni sağlandığında, her *anahtarını* arka arkaya **getaddrinfo**\ (3) **AF_UNSPEC** adres ailesiyle iletin ve döndürülen her yuva adresi yapısını numaralandırın.
 
    **ahostsv4**
       **ahosts** ile aynıdır, ancak **AF_INET** adres ailesini kullanır.
-      
+
    **ahostsv6**
       **ahosts** ile aynıdır, ancak **AF_INET6** adres ailesini kullanır. Bu durumda **getaddrinfo**\ (3) çağrısı **AI_V4MAPPED** bayrağını içerir.
-      
+
    **aliases**
       Komut için *anahtar* sağlanmadığında, takma ad veritabanını numaralandırmak için **setaliasent**\ (3), **getaliasent**\ (3) ve **endaliasent**\ (3) kullanın. Bir veya daha fazla *anahtar* bağımsız değişkeni sağlandığında, her *anahtar* değerini art arda **getaliasbyname**\ (3) öğesine iletin ve sonucu görüntüleyin.
 
@@ -45,7 +45,7 @@ Desteklenen *veritabanları* aşağıda listelenmiştir:
       Hiçbir *anahtar* sağlanmadığında, gshadow veritabanını numaralandırmak için **setsgent**\ (3), **getsgent**\ (3) ve **endsgent**\ (3) kullanın. Bir veya daha fazla *anahtar* bağımsız değişkeni sağlandığında, her *anahtar* değerini arka arkaya **getsgnam**\ (3) öğesine iletin ve sonucu görüntüleyin.
 
    **hosts**
-      Hiçbir *anahtar* sağlanmadığında, anasistem veritabanını numaralandırmak için **sethostent**\ (3), **gethostent**\ (3) ve **endhostent**\ (3) kullanın. 
+      Hiçbir *anahtar* sağlanmadığında, anasistem veritabanını numaralandırmak için **sethostent**\ (3), **gethostent**\ (3) ve **endhostent**\ (3) kullanın.
       Bir veya daha fazla *anahtar* bağımsız değişkeni sağlandığında, **inet_pton**\ 'a bir çağrının yapılmasına bağlı olarak her *anahtarı* **gethostbyaddr**\ (3) veya **gethostbyname2**\ (3) öğesine iletin. 3) *anahtar*'ın bir IPv6 veya IPv4 adresi olduğunu veya olmadığını gösterir ve sonucu görüntüleyin.
 
    **initgroups**
@@ -71,13 +71,13 @@ Desteklenen *veritabanları* aşağıda listelenmiştir:
 
    **shadow**
        Hiçbir *anahtar* sağlanmadığında, gölge veritabanını numaralandırmak için **setspent**\ (3), **getspent**\ (3) ve **endspent**\ (3) kullanın. Bir veya daha fazla *anahtar* argümanı sağlandığında, her *anahtarı* art arda **getspnam** \ (3) öğesine iletin ve sonucu görüntüleyin.
-       
+
 SEÇENEKLER
 ==========
 
 **-s service**, **-service service **
    Belirtilen hizmetle **(service)** tüm veritabanlarını geçersiz kılın. (Glibc 2.2.5'den beri.)
-   
+
 **-s database:service**, **--service database:service**
    Yalnızca belirtilen hizmetle belirtilen veritabanlarını geçersiz kıl.Bu seçenek birden çok kez kullanılabilir, ancak her biri için yalnızca son hizmet veritabanını kullanılacaktır. (Glibc 2.4'ten beri.)
 
@@ -113,6 +113,6 @@ Aşağıdaki çıkış değerlerinden biri **getent** tarafından döndürülebi
       Numaralandırma bu *veritabanı*'nda desteklenmez.
 
 AYRICA BAKINIZ
-========
+==============
 
 **nsswitch.conf**\ (5)

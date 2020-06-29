@@ -4,14 +4,14 @@
 pldd - bir sürece bağlı dinamik paylaşılan nesneleri görüntüler
 
 ÖZET
-========
+====
 ::
 
    pldd pid
    pldd option
 
 AÇIKLAMA
-===========
+========
 
 **pldd** komutu, sürece belirtilen işlem kimliğiyle (PID) bağlanan dinamik paylaşılan nesnelerin (DSO) bir listesini görüntüler. Liste, **dlopen** \ (3) kullanılarak dinamik olarak yüklenen kütüphaneleri içerir.
 
@@ -26,7 +26,7 @@ SEÇENEKLER
 
 **-V**, **--version**
     Program sürüm bilgilerini görüntüleyin ve çıkın.
-    
+
 ÇIKIŞ DURUMU
 ===========
 

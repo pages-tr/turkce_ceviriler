@@ -1,15 +1,15 @@
-ADI
+İSİM
 ====
 
 ldd - paylaşılan nesne bağımlılıklarını yazdır
 
 ÖZET
-========
+====
 
 **ldd** [*seçenek*] ... *dosya* ...
 
 AÇIKLAMA
-===========
+========
 
 **ldd**, her program için gereken paylaşılan nesneleri (paylaşılan kütüphaneler) veya komut satırında belirtilen paylaşılan nesneyi yazdırır. Kullanımı ve çıktısının bir örneği aşağıdadır:
 
@@ -38,16 +38,16 @@ Bu nedenle, rastgele kod çalıştırılmasına neden olabileceğinden, güvenil
 ::
 
    $ objdump -p /path/to/program | grep NEEDED
-   
-OPTIONS
-=======
+
+SEÇENEKLER
+==========
 
 **--version**
    **ldd** sürüm numarasını yazdırın.
 
 **-v**, **--verbose**
    Sembol sürüm bilgisi dahil tüm bilgileri yazdırın.
-   
+
 **-u**, **--unused**
    Kullanılmayan doğrudan bağımlılıkları yazdırın. (Glibc 2.3.4'ten beri.)
 
@@ -61,13 +61,13 @@ OPTIONS
     Kullanım bilgileri.
 
 BÖCEK
-====
+=====
 
 **ldd**, a.out paylaşılan kitaplıklarında çalışmaz.
 
 **ldd**, derleyici sürümlerine **ldd** desteği eklenmeden önce oluşturulmuş bazı son derece eski a.out rogramları ile çalışmaz. Bu programlardan birinde **ldd** kullanırsanız, program *argc* = 0 ile çalışmayı dener ve sonuçlar tahmin edilemez olur.
 
 AYRICA BAKINIZ
-========
+==============
 
 **pldd**\ (1), **sprof**\ (1), **ld.so**\ (8), **ldconfig**\ (8)
