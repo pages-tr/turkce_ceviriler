@@ -29,29 +29,29 @@ SEÇENEKLER
 
    **//TRANSLIT** dizesi, *kodlamasına* eklenirse, dönüştürülmekte olan karakterler gerektiğinde ve mümkün olduğunda dönüştürülür. Bu, bir karakter hedef karakter kümesinde temsil edilemediğinde, bir veya birkaç benzer görünümlü karakterle yaklaşık olarak tahmin edilebilir. Hedef karakter kümesinin dışında olan ve harf çevirisi yapılamayan karakterler çıktıda bir soru işareti (?) İle değiştirilir.
 
- **-l**, **--list**
-   Bilinen tüm karakter kümesi kodlarını listeler.
+**-l**, **--list**
+ Bilinen tüm karakter kümesi kodlarını listeler.
 
- **-c**
-   Bu tür karakterlerle karşılaştığında sonlandırmak yerine dönüştürülemeyen karakterleri sessizce atın.
+**-c**
+ Bu tür karakterlerle karşılaştığında sonlandırmak yerine dönüştürülemeyen karakterleri sessizce atın.
 
- **-o outputfile , --output=outputfile**
-   Çıktı için * çıktıdosyası * kullanın.
+**-o outputfile , --output=outputfile**
+ Çıktı için * çıktıdosyası * kullanın.
 
- **-s**, **--silent**
-   Bu seçenek yok sayılır; yalnızca uyumluluk için sağlanmıştır.
+**-s**, **--silent**
+ Bu seçenek yok sayılır; yalnızca uyumluluk için sağlanmıştır.
 
- **--verbose**
-   Birden çok dosyayı işlerken standart hata ile ilgili ilerleme bilgilerini yazdırın.
+**--verbose**
+ Birden çok dosyayı işlerken standart hata ile ilgili ilerleme bilgilerini yazdırın.
 
- **-?**, **--help**
-   Bir kullanım özeti yazdırın ve çıkın.
+**-?**, **--help**
+ Bir kullanım özeti yazdırın ve çıkın.
 
- **--usage**
-   Kısa bir kullanım özeti yazdırın ve çıkın.
+**--usage**
+ Kısa bir kullanım özeti yazdırın ve çıkın.
 
- **-V**, **--version**
-   **iconv** için sürüm numarasını, lisansı ve garanti reddini yazdırın.
+**-V**, **--version**
+ **iconv** için sürüm numarasını, lisansı ve garanti reddini yazdırın.
 
 ÇIKIŞ DURUMU
 ============

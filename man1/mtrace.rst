@@ -27,7 +27,7 @@ BÖCEK
 =====
 
 Hata raporlama talimatları için lütfen şu adrese bakın:
-`<http://www.gnu.org/software/libc/bugs.html>` __.
+`<http://www.gnu.org/software/libc/bugs.html>`__.
 
 AYRICA BAKINIZ
 ==============
