@@ -14,7 +14,7 @@ AÇIKLAMA
 
 **iconv** programı bir kodlamadaki metni okur ve başka bir kodlamadaki metni verir. Hiçbir giriş dosyası verilmezse veya kısa çizgi (-) olarak verilirse, **iconv** standart girişten okunur. Hiçbir çıktı dosyası verilmezse, **iconv** standart çıktıya yazar.
 
-* From-encoding * belirtilmezse, varsayılan değer geçerli yerel ayarın karakter kodlamasından türetilir. * To-encoding * belirtilmezse, varsayılan değer geçerli yerel ayarın karakter kodlamasından türetilir.
+*From-encoding* belirtilmezse, varsayılan değer geçerli yerel ayarın karakter kodlamasından türetilir. *To-encoding* belirtilmezse, varsayılan değer geçerli yerel ayarın karakter kodlamasından türetilir.
 
 SEÇENEKLER
 =======
@@ -25,9 +25,9 @@ SEÇENEKLER
 **-t**\ *to-encoding*\ **, --to-code=**\ *to-encoding*
    Çıktı karakterleri için * -şifreleme * kullanın.
 
-   **//IGNORE** dizesi * kodlamasına * eklenirse, dönüştürülemeyen karakterler atılır ve dönüştürme işleminden sonra bir hata yazdırılır.
+   **//IGNORE** dizesi *kodlamasına* eklenirse, dönüştürülemeyen karakterler atılır ve dönüştürme işleminden sonra bir hata yazdırılır.
 
-   **//TRANSLIT** dizesi, * kodlamasına * eklenirse, dönüştürülmekte olan karakterler gerektiğinde ve mümkün olduğunda dönüştürülür. Bu, bir karakter hedef karakter kümesinde temsil edilemediğinde, bir veya birkaç benzer görünümlü karakterle yaklaşık olarak tahmin edilebilir. Hedef karakter kümesinin dışında olan ve harf çevirisi yapılamayan karakterler çıktıda bir soru işareti (?) İle değiştirilir.
+   **//TRANSLIT** dizesi, *kodlamasına* eklenirse, dönüştürülmekte olan karakterler gerektiğinde ve mümkün olduğunda dönüştürülür. Bu, bir karakter hedef karakter kümesinde temsil edilemediğinde, bir veya birkaç benzer görünümlü karakterle yaklaşık olarak tahmin edilebilir. Hedef karakter kümesinin dışında olan ve harf çevirisi yapılamayan karakterler çıktıda bir soru işareti (?) İle değiştirilir.
 
  **-l**, **--list**
    Bilinen tüm karakter kümesi kodlarını listeler.
