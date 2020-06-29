@@ -27,7 +27,6 @@ SEÇENEKLER
 **-t, --time**
    Yatay eksende sınırlandırma ölçeği olarak belirli bir zamanı (işlev çağrılarının sayısı yerine) kullanın.
 
-
 **-T, --total**
    Ayrıca toplam bellek tüketiminin bir grafiğini çizin.
 
