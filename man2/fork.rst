@@ -117,7 +117,7 @@ Linux altında, **fork**\ () yazma üzerine kopyalama sayfaları kullanılarak u
 C kütüphanesi / çekirdek farklılıkları
 ----------------------------
 
-Sürüm 2.3.3'ten bu yana, çekirdek **fork**\ () sistem çağrısını çağırmak yerine, NPTL iş parçacığı uygulamasının bir parçası olarak sağlanan glibc ** fork **\ () sarmalayıcısı **klon**\ (2) geleneksel sistem çağrısı ile aynı etkiyi sağlayan bayraklarla. (**fork**\ () çağrısı, *bayrakları* yalnızca **SIGCHLD** olarak belirten **klon**\ (2) çağrısına eşdeğerdir.) Glibc sarıcı, kullanılmış çatal işleyicilerini çağırır **pthread_atfork**\ (3) kullanılarak kurulmuştur.
+Sürüm 2.3.3'ten bu yana, çekirdek **fork**\ () sistem çağrısını çağırmak yerine, NPTL iş parçacığı uygulamasının bir parçası olarak sağlanan glibc **fork**\ () sarmalayıcısı **klon**\ (2) geleneksel sistem çağrısı ile aynı etkiyi sağlayan bayraklarla. (**fork**\ () çağrısı, *bayrakları* yalnızca **SIGCHLD** olarak belirten **klon**\ (2) çağrısına eşdeğerdir.) Glibc sarıcı, kullanılmış çatal işleyicilerini çağırır **pthread_atfork**\ (3) kullanılarak kurulmuştur.
 
 ÖRNEKLER
 ========
