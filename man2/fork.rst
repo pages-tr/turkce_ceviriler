@@ -27,7 +27,7 @@ Alt süreç, aşağıdaki noktalar dışında ana sürecin tam bir kopyasıdır:
 
 - İşlem kaynağı kullanımları (**getrusage**\ (2)) ve CPU zaman sayaçları (**kez**\ (2)) çocukta sıfırlanır.
 
-- Çocuğun beklemede olan sinyaller kümesi başlangıçta boştur (**işaretleme **\ (2)).
+- Çocuğun beklemede olan sinyaller kümesi başlangıçta boştur (**işaretleme**\ (2)).
 
 - Çocuk semafor ayarlamalarını üst öğesinden devralmaz (**semop**\ (2)).
 
@@ -45,10 +45,10 @@ Yukarıdaki listedeki işlem özniteliklerinin tümü POSIX.1'de belirtilmiştir
 
 - Varsayılan zamanlayıcı gevşeme değeri, ebeveynin geçerli zamanlayıcı gevşeme değerine ayarlanır. **prctl**\ (2) içindeki **PR_SET_TIMERSLACK** açıklamasına bakın.
 
-- **madvise**\ (2) **MADV_DONTFORK** bayrağıyla işaretlenmiş bellek eşlemeleri **çatal**\ () üzerinden devralınmamıştır.
+- **madvise**\ (2) **MADV_DONTFORK** bayrağıyla işaretlenmiş bellek eşlemeleri **fork**\ () üzerinden devralınmamıştır.
 
 - Adres aralıkları ile işaretlenmiş bellek
-   **madvise**\ (2) **MADV_WIPEONFORK** bayrağı **çatal**\ () sonrasında çocukta sıfırlanır. (**MADV_WIPEONFORK** ayarı, çocuktaki bu adres aralıkları için yerinde kalır.)
+   **madvise**\ (2) **MADV_WIPEONFORK** bayrağı **fork**\ () sonrasında çocukta sıfırlanır. (**MADV_WIPEONFORK** ayarı, çocuktaki bu adres aralıkları için yerinde kalır.)
 
 - Çocuğun sonlandırma sinyali daima **SIGCHLD** (bkz. **klon**\ (2)).
 
@@ -56,7 +56,7 @@ Yukarıdaki listedeki işlem özniteliklerinin tümü POSIX.1'de belirtilmiştir
 
 Aşağıdaki hususlara dikkat edin:
 
-- Alt işlem, tek bir iş parçacığıyla oluşturulur; bu işlem **çatal**\ () olarak adlandırılır. Ebeveynin tüm sanal adres alanı, mutekslerin durumu, koşul değişkenleri ve diğer pthreads nesneleri dahil olmak üzere çocukta çoğaltılır; **pthread_atfork**\ (3) kullanımı, bunun neden olabileceği sorunların çözümünde yardımcı olabilir.
+- Alt işlem, tek bir iş parçacığıyla oluşturulur; bu işlem **fork**\ () olarak adlandırılır. Ebeveynin tüm sanal adres alanı, mutekslerin durumu, koşul değişkenleri ve diğer pthreads nesneleri dahil olmak üzere çocukta çoğaltılır; **pthread_atfork**\ (3) kullanımı, bunun neden olabileceği sorunların çözümünde yardımcı olabilir.
 
 - Çok iş parçacıklı bir programdaki **fork**\() sonrasında çocuk, çağrılıncaya kadar yalnızca zaman uyumsuz sinyal güvenliği işlevlerini (bkz. **sinyal güvenliği**\ (7)) güvenle arayabilir **execve**\ (2) uygulayın.
 
@@ -91,7 +91,7 @@ HATALAR
    Arayan kişi **SCHED_DEADLINE** zamanlama politikası altında çalışmaktadır ve çatal üzerinde sıfırlama bayrağı ayarlanmamıştır. Bkz. **zamanlama**\ (7).
 
 **ENOMEM**
-   **çatal**\ () gerekli çekirdek yapılarını tahsis edemedi
+   **fork**\ () gerekli çekirdek yapılarını tahsis edemedi
    çünkü bellek dar.
 
 **ENOMEM**
@@ -112,17 +112,17 @@ POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD.
 NOTLAR
 =====
 
-Linux altında, **fork** \ () yazma üzerine kopyalama sayfaları kullanılarak uygulanır, bu nedenle maruz kaldığı tek ceza, üst sayfa sayfalarını çoğaltmak ve çocuk.
+Linux altında, **fork**\ () yazma üzerine kopyalama sayfaları kullanılarak uygulanır, bu nedenle maruz kaldığı tek ceza, üst sayfa sayfalarını çoğaltmak ve çocuk.
 
 C kütüphanesi / çekirdek farklılıkları
 ----------------------------
 
-Sürüm 2.3.3'ten bu yana, çekirdek **fork** \ () sistem çağrısını çağırmak yerine, NPTL iş parçacığı uygulamasının bir parçası olarak sağlanan glibc ** fork ** \ () sarmalayıcısı **klon** \ (2) geleneksel sistem çağrısı ile aynı etkiyi sağlayan bayraklarla. (**fork** \ () çağrısı, *bayrakları* yalnızca **SIGCHLD** olarak belirten **klon** \ (2) çağrısına eşdeğerdir.) Glibc sarıcı, kullanılmış çatal işleyicilerini çağırır **pthread_atfork** \ (3) kullanılarak kurulmuştur.
+Sürüm 2.3.3'ten bu yana, çekirdek **fork**\ () sistem çağrısını çağırmak yerine, NPTL iş parçacığı uygulamasının bir parçası olarak sağlanan glibc ** fork **\ () sarmalayıcısı **klon**\ (2) geleneksel sistem çağrısı ile aynı etkiyi sağlayan bayraklarla. (**fork**\ () çağrısı, *bayrakları* yalnızca **SIGCHLD** olarak belirten **klon**\ (2) çağrısına eşdeğerdir.) Glibc sarıcı, kullanılmış çatal işleyicilerini çağırır **pthread_atfork**\ (3) kullanılarak kurulmuştur.
 
 ÖRNEKLER
 ========
 
-Bkz. **pipe** \ (2) ve **wait** \ (2).
+Bkz. **pipe**\ (2) ve **wait**\ (2).
 
 AYRICA BAKINIZ
 ========
