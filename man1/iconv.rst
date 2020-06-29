@@ -62,3 +62,5 @@ Başarı sıfır, hatalar sıfır değil.
 ===========
 
 Dahili olarak, ** iconv ** programı, bir karakter kümesine ve karakter kümesinden dönüştürmek için * gconv * modüllerini (dinamik olarak yüklenmiş paylaşılan kütüphaneler) kullanan ** iconv ** \ (3) işlevini kullanır. ** iconv ** \ (3) öğesini çağırmadan önce, ** iconv ** programı önce ** iconv_open ** \ (3) kullanarak bir dönüşüm tanımlayıcısı ayırmalıdır. İkinci işlevin çalışması ** GCONV_PATH ** ortam değişkeninin ayarından etkilenir:
+
+- ** GCONV_PATH ** ayarlanmamışsa, ** iconv_open ** \ (3) ** iconvconfig ** \ (8) tarafından oluşturulan sistem gconv modülü yapılandırma önbellek dosyasını yükler ve ardından yapılandırmaya bağlı olarak gconv'u yükler dönüşüm gerçekleştirmek için gerekli modüller. Sistem gconv modülü yapılandırma önbellek dosyası yoksa, sistem gconv modülü yapılandırma dosyası kullanılır.
