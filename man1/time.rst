@@ -5,7 +5,7 @@ zaman-zaman basit bir komut veya kaynak kullanımı vermek
 
 ÖZET
 ====
-**time [**\ *options*\ **]**\ *command*\ **[**\ *arguments...*\ **]**
+**time [**\ *seçenekler*\ **]**\ *komut*\ **[**\ *argümanlar...*\ **]**
 
 AÇIKLAMA
 ========

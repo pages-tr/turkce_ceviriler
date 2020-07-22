@@ -6,7 +6,7 @@ mtrace - malloc izleme günlüğünü yorumlar
 ÖZET
 ====
 
-**mtrace** [*option*]... [*binary*] *mtracedata*
+**mtrace** [*seçenek*]... [*ikili*] *mtracedata*
 
 AÇIKLAMA
 ========
