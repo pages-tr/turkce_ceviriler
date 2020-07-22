@@ -120,134 +120,121 @@ yani, **-f ** **--force** ile aynı değildir.
    yerel ayar kategorileri için ayrı çıktı dosyaları oluşturun. Bu, sistem yerel
    ayarı arşiv güncelleştirmelerinin **localedef** ile oluşturulan özel yerel
    ayarların üzerine yazmasını önlemeye yardımcı olur.
-     
+
 **--no-hard-links**
    Yüklü yerel ayarlar arasında sabit bağlantılar oluşturmayın.
 
 **--no-warnings=**\ *warnings*
-   Comma-separated list of warnings to disable. Supported warnings are
-   *ascii* and *intcurrsym*.
+   Devre dışı bırakılacak uyarıların virgülle ayrılmış listesi. Desteklenen
+   uyarılar *ascii* ve *intcurrsym*'dir.
 
 **--posix**
-   Conform strictly to POSIX. Implies **--verbose**. This option
-   currently has no other effect. POSIX conformance is assumed if the
-   environment variable **POSIXLY_CORRECT** is set.
+   POSIX'e kesinlikle uyun. **--verbose** anlamına gelir. Bu seçeneğin şu anda
+   başka bir etkisi yoktur. **POSIXLY_CORRECT** ortam değişkeni ayarlanmışsa,
+   POSIX uyumluluğu varsayılır.
 
 **--prefix=**\ *pathname*
-   Set the prefix to be prepended to the full archive pathname. By
-   default, the prefix is empty. Setting the prefix to *foo*, the
-   archive would be placed in *foo/usr/lib/locale/locale-archive*.
+   Tam arşiv yol adına eklenecek öneki ayarlayın. Varsayılan olarak önek
+   boştur. Önek *foo* olarak ayarlandığında, arşiv *foo/usr/lib/locale/locale-archive*
+   içine yerleştirilir.
 
 **--quiet**
-   Suppress all notifications and warnings, and report only fatal
-   errors.
+   Tüm bildirimleri ve uyarıları bastırın ve yalnızca önemli hataları bildirin.
 
 **--replace**
-   Replace a locale in the locale archive file. Without this option, if
-   the locale is in the archive file already, an error occurs.
+   Yerel ayar arşiv dosyasındaki bir yerel ayarı değiştirin. Bu seçenek
+   olmadan, yerel ayar zaten arşiv dosyasındaysa bir hata oluşur.
 
 **--warnings=**\ *warnings*
-   Comma-separated list of warnings to enable. Supported warnings are
-   *ascii* and *intcurrsym*.
+   Etkinleştirmek için virgülle ayrılmış uyarıların listesi.
+   Desteklenen uyarılar *ascii* ve *intcurrsym* dir.
 
 **-?**, **--help**
-   Print a usage summary and exit. Also prints the default paths used by
-   **localedef**.
+   Bir kullanım özeti yazdırın ve çıkın. Ayrıca **localedef** tarafından
+   kullanılan varsayılan yolları da yazdırır.
 
 **--usage**
-   Print a short usage summary and exit.
+   Kısa bir kullanım özeti yazdırın ve çıkın.
 
 **-V**, **--version**
-   Print the version number, license, and disclaimer of warranty for
-   **localedef**.
+   **localedef** için sürüm numarasını, lisansı ve garanti reddini yazdırın.
 
 ÇIKIŞ DURUMU
 ============
 
-One of the following exit values can be returned by **localedef**:
+Aşağıdaki çıkış değerlerinden biri **localedef** tarafından döndürülebilir:
 
    **0**
-      Command completed successfully.
+      Komut başarıyla tamamlandı.
 
    **1**
-      Warnings or errors occurred, output files were written.
+      Uyarılar veya hatalar oluştu, çıktı dosyaları yazıldı.
 
    **4**
-      Errors encountered, no output created.
+      Hatalarla karşılaşıldı, çıktı oluşturulmadı.
 
 ÇALIŞMA ORTAMI
 ==============
 
 **POSIXLY_CORRECT**
-   The **--posix** flag is assumed if this environment variable is set.
+  **--posix** bayrağı, bu ortam değişkeni ayarlanmışsa varsayılır.
 
 **I18NPATH**
-   A colon-separated list of search directories for files.
+   Dosyalar için iki nokta üst üste işaretli arama dizinleri listesi.
 
 DOSYALAR
 ========
 
 */usr/share/i18n/charmaps*
-   Usual default character map path.
+   Her zamanki varsayılan karakter eşleme yolu.
 
 */usr/share/i18n/locales*
-   Usual default path for locale definition files.
+   Yerel ayar tanımı dosyaları için olağan varsayılan yol.
 
 */usr/share/i18n/repertoiremaps*
-   Usual default repertoire map path.
+   Repertuar harita yolu için olağan varsayılan yol.
 
 */usr/lib/locale/locale-archive*
-   Usual default locale archive location.
+   Olağan varsayılan yerel ayar arşiv konumu.
 
 */usr/lib/locale*
-   Usual default path for compiled individual locale data files.
+   Derlenmiş tek tek yerel ayar veri dosyaları için her zamanki varsayılan yol.
 
 *outputpath/LC_ADDRESS*
-   An output file that contains information about formatting of
-   addresses and geography-related items.
+   Adreslerin ve coğrafya ile ilgili öğelerin biçimlendirilmesi hakkında bilgi içeren bir çıktı dosyası.
 
 *outputpath/LC_COLLATE*
-   An output file that contains information about the rules for
-   comparing strings.
+   Dizeleri karşılaştırma kuralları hakkında bilgi içeren bir çıktı dosyası.
 
 *outputpath/LC_CTYPE*
-   An output file that contains information about character classes.
+   Karakter sınıfları hakkında bilgi içeren bir çıktı dosyası.
 
 *outputpath/LC_IDENTIFICATION*
-   An output file that contains metadata about the locale.
+   Yerel ayarla ilgili meta veriler içeren bir çıktı dosyası.
 
 *outputpath/LC_MEASUREMENT*
-   An output file that contains information about locale measurements
-   (metric versus US customary).
+   Yerel ölçümler hakkında bilgi içeren bir çıktı dosyası (metrik ve ABD geleneksel).
 
 *outputpath/LC_MESSAGES/SYS_LC_MESSAGES*
-   An output file that contains information about the language messages
-   should be printed in, and what an affirmative or negative answer
-   looks like.
+   Dil mesajları ve olumlu ya da olumsuz yanıtın nasıl göründüğü hakkında bilgi içeren bir çıktı dosyası yazdırılmalıdır.
 
 *outputpath/LC_MONETARY*
-   An output file that contains information about formatting of monetary
-   values.
+   Parasal değerlerin biçimlendirilmesi hakkında bilgi içeren bir çıktı dosyası.
 
 *outputpath/LC_NAME*
-   An output file that contains information about salutations for
-   persons.
+   Kişiler için selamlar hakkında bilgi içeren bir çıktı dosyası.
 
 *outputpath/LC_NUMERIC*
-   An output file that contains information about formatting of
-   nonmonetary numeric values.
+   Parasal olmayan sayısal değerlerin biçimlendirilmesi hakkında bilgi içeren bir çıktı dosyası.
 
 *outputpath/LC_PAPER*
-   An output file that contains information about settings related to
-   standard paper size.
+   Standart kağıt boyutu ile ilgili ayarlar hakkında bilgi içeren bir çıktı dosyası.
 
 *outputpath/LC_TELEPHONE*
-   An output file that contains information about formats to be used
-   with telephone services.
+   Telefon hizmetleri ile kullanılacak biçimler hakkında bilgi içeren bir çıktı dosyası.
 
 *outputpath/LC_TIME*
-   An output file that contains information about formatting of data and
-   time values.
+   Veri ve zaman değerleri biçimlendirme hakkında bilgi içeren bir çıktı dosyası.
 
 UYUMLULUK
 =========
@@ -257,17 +244,16 @@ POSIX.1-2008.
 ÖRNEKLER
 ========
 
-Compile the locale files for Finnish in the UTF-8 character set and add
-it to the default locale archive with the name **fi_FI.UTF-8**:
+UTF-8 karakter kümesinde Fince için yerel ayar dosyalarını derleyin ve
+**fi_FI.UTF-8** adıyla varsayılan yerel ayar arşivine ekleyin:
 
 ::
 
    localedef -f UTF-8 -i fi_FI fi_FI.UTF-8
 
-The next example does the same thing, but generates files into the
-*fi_FI.UTF-8* directory which can then be used by programs when the
-environment variable **LOCPATH** is set to the current directory (note
-that the last argument must contain a slash):
+Bir sonraki örnek aynı şeyi yapar, ancak *fi_FI.UTF-8* dosyasına dosya oluşturur.
+**LOCPATH** ortam değişkeni geçerli dizine ayarlandığında programlar tarafından
+kullanılabilir (son argümanın eğik çizgi içermesi gerektiğini unutmayın):
 
 ::
 
