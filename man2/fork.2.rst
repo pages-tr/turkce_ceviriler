@@ -1,7 +1,7 @@
 İSİM
 ====
 
-çatal - alt işlem oluştur
+fork - (çatal) alt işlem oluştur
 
 ÖZET
 ========

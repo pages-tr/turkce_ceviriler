@@ -86,7 +86,7 @@ Bölüm 2 için çevirisi yapılan kılavuz dosyaları.
 - [ ]  finit_module.2.rst
 - [ ]  flistxattr.2.rst
 - [ ]  flock.2.rst
-- [ ]  fork.2.rst
+- [X]  fork.2.rst
 - [ ]  free_hugepages.2.rst
 - [ ]  fremovexattr.2.rst
 - [ ]  fsetxattr.2.rst
