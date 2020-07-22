@@ -12,7 +12,7 @@ Bölüm 1 için çevirisi yapılan kılavuz dosyaları.
 - [X] iconv.1.rst
 - [X] intro.1.rst
 - [X] ldd.1.rst
-- [ ] locale.1.rst
+- [X] locale.1.rst
 - [X] localedef.1.rst
 - [X] memusage.1.rst
 - [X] memusagestat.1.rst
